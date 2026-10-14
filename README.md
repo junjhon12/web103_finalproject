@@ -1,8 +1,8 @@
-# [your app name here]
+# TackleLog
 
 CodePath WEB103 Final Project
 
-Designed and developed by: [your names here]
+Designed and developed by: Quoc Bao Le
 
 🔗 Link to deployed app:
 
@@ -10,35 +10,35 @@ Designed and developed by: [your names here]
 
 ### Description and Purpose
 
-[text goes here]
+Full-stack fishing journal that lets anglers record every trip, log each catch, and track which lures actually produced fish.
 
 ### Inspiration
 
-[text goes here]
+I like fishing
 
 ## Tech Stack
 
-Frontend:
+Frontend: React, Tailwind CSS, Fetch API
 
-Backend:
+Backend: Node.js + Express, PostgreSQL, CORS + dotenv
 
 ## Features
 
-### [Name of Feature 1]
+### Trip Log
 
-[short description goes here]
-
-[gif goes here]
-
-### [Name of Feature 2]
-
-[short description goes here]
+Create, view, edit, and delete fishing trips. Each trip stores location, date, weather, water temperature, and notes, and shows all catches from that day.
 
 [gif goes here]
 
-### [Name of Feature 3]
+### Catch Tracking 
 
-[short description goes here]
+Log every fish with species, weight, length, time caught, and released/kept status. Catches support all four REST operations: view, create, update, and delete.
+
+[gif goes here]
+
+### Tackle Box with Lure Linking
+
+A visual grid of every lure in your box, with a count of how many catches it's tied to. 
 
 [gif goes here]
 
@@ -46,4 +46,38 @@ Backend:
 
 ## Installation Instructions
 
-[instructions go here]
+git clone https://github.com/junjhon12/tacklelog.git
+cd tacklelog
+
+# backend
+cd server
+npm install
+
+# frontend
+cd ../client
+npm install
+
+createdb tacklelog
+
+psql tacklelog < server/db/schema.sql
+
+DATABASE_URL=postgres://localhost:5432/tacklelog
+PORT=3001
+
+VITE_API_URL=http://localhost:3001
+
+cd server
+npm run dev
+
+# in another terminal
+curl -X POST http://localhost:3001/api/reset
+
+# Might change later so that both front andb ack can be lauanch with one command
+
+# backend
+cd server
+npm run dev
+
+# frontend
+cd client
+npm run dev
