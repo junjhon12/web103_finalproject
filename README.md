@@ -2,7 +2,7 @@
 
 CodePath WEB103 Final Project
 
-Designed and developed by: Quoc Bao Le
+Designed and developed by: Quoc Bao Le, Phuong Nguyen
 
 🔗 Link to deployed app:
 
